@@ -1,0 +1,28 @@
+{% extends 'master' %}
+
+{% block content %}
+    <div class="jumbotron container__jmb">
+        <div class="col-lg-12 d-flex justify-content-center">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-inverse">
+                    <tr>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Phone</th>
+                        <th>Mobile Phone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for phone in phones %}
+                    <tr>
+                        <td>{{ phone.name }}</td>
+                        <td>{{ phone.surname }}</td>
+                        <td>{{ phone.phone }}</td>
+                        <td>{{ phone.mobile }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'master' %}
+
+{% block content %}
+    <div class="jumbotron container__jmb">
+        <form id="frmPhone" onsubmit="return false;">
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <label class="home-label">Phone: <input class="form-control" type="text" name="phone" required/></label>
+                    <label class="home-label">Mobile Phone: <input class="form-control" type="text" name="mobile" /></label>
+                    <label class="home-label">Name: <input class="form-control" type="text" name="name" required/></label>
+                    <label class="home-label">Surname: <input class="form-control" type="text" name="surname" required/></label>
+                </div>
+            </div>
+            <div class="row btn-area">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <button class="btn btn-lg btn-primary btn-addphone">Add Phone</button>
+                    <a class="btn btn-lg btn-success" href="/phone-list">Go To Phone List</a>
+                </div>
+            </div><br />
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <div class="alert d-none" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <strong id="msg-status"></strong> <span id="msg-general"></span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
